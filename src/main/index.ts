@@ -1,8 +1,9 @@
 import { electronApp, is, optimizer } from '@electron-toolkit/utils'
+import * as remoteMain from '@electron/remote/main'
 import { BrowserWindow, app, shell } from 'electron'
 import { join } from 'path'
 import icon from '../../resources/icon.png?asset'
-
+remoteMain.initialize()
 function createWindow(): void {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
@@ -25,7 +26,7 @@ function createWindow(): void {
       preload: join(__dirname, '../preload/index.js'),
       sandbox: true,
       contextIsolation: true,
-      nodeIntegration: false // tried with true
+      nodeIntegration: false
     }
   })
 
