@@ -23,7 +23,8 @@
     "@bytemd/react": "^1.21.0",
     "@electron-toolkit/preload": "^3.0.0",
     "@electron-toolkit/utils": "^3.0.0",
-    "@mdxeditor/editor": "^2.3.5"
+    "@mdxeditor/editor": "^2.3.5",
+    "jotai": "^2.6.3"
   },
   "devDependencies": {
     "@electron-toolkit/eslint-config-prettier": "^2.0.0",
