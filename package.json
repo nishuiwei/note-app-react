@@ -2,6 +2,14 @@
   "name": "note-mark",
   "version": "1.0.0",
   "description": "Build a Markdown Notes app with Electron, React, Typescript, Tailwind and Jotai",
+  "keywords": [
+    "typescript",
+    "react",
+    "electron",
+    "Markdown",
+    "tailwind",
+    "Notes"
+  ],
   "main": "./out/main/index.js",
   "author": {
     "name": "weihuijie",
@@ -57,5 +65,10 @@
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3",
     "vite": "^5.0.12"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/nishuiwei/note-app-react"
   }
 }
