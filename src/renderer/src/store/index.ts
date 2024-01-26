@@ -78,13 +78,21 @@ export const createEmptyAtom = atom(null, async (get, set) => {
   set(selectedNoteIndexAtom, 0)
 })
 
-export const deleteNoteAtom = atom(null, (get, set) => {
+export const deleteNoteAtom = atom(null, async (get, set) => {
   const notes = get(notesAtom)
   const selectedNote = get(selectedNoteAtom)
   if (!selectedNote || !notes) return
+
+  const isDeleted = await window.context.deleteNote(selectedNote.title)
+
+  if (!isDeleted) return
+
+  // filter out the deleted note
   set(
     notesAtom,
     notes.filter((note) => note.title !== selectedNote.title)
   )
+
+  // de select ant note
   set(selectedNoteIndexAtom, null)
 })
